@@ -31,7 +31,13 @@ module Ruboty
       end
 
       def listen
-        stream.user do |message|
+        track_word = if ENV['TWITTER_TRACK_KEYWORD'].present?
+            ENV['TWITTER_TRACK_KEYWORD']
+          else
+            ''
+          end
+
+        stream.filter(track: track_word) do |message|
           case message
           when ::Twitter::Tweet
             retweeted = message.retweeted_status.is_a?(::Twitter::Tweet)
@@ -42,14 +48,6 @@ module Ruboty
               from: tweet.user.screen_name,
               tweet: message
             )
-          when ::Twitter::Streaming::Event
-            if message.name == :follow
-              Ruboty.logger.debug("#{message.source.screen_name} followed #{message.target.screen_name}")
-              if enabled_to_auto_follow_back? && message.target.screen_name == robot.name
-                Ruboty.logger.debug("Trying to follow back #{message.source.screen_name}")
-                client.follow(message.source.screen_name)
-              end
-            end
           end
         end
       end

@@ -3,12 +3,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "ruboty/twitter/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "ruboty-twitter"
+  spec.name          = "ruboty-twitter-stream-filter"
   spec.version       = Ruboty::Twitter::VERSION
-  spec.authors       = ["Ryo Nakamura"]
-  spec.email         = ["r7kamura@gmail.com"]
+  spec.authors       = ["hatch2"]
+  spec.email         = ["tasuke.radio@gmail.com"]
   spec.summary       = "An ruboty adapter for twitter."
-  spec.homepage      = "https://github.com/r7kamura/ruboty-twitter"
+  spec.homepage      = "https://github.com/hatch2/ruboty-twitter-stream-filter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
