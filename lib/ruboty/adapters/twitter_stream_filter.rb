@@ -4,7 +4,7 @@ require "twitter"
 
 module Ruboty
   module Adapters
-    class Twitter < Base
+    class TwitterStreamFilter < Base
       include Mem
 
       env :TWITTER_ACCESS_TOKEN, "Twitter access token"

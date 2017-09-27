@@ -4,7 +4,7 @@ An [Ruboty](https://github.com/hatch2/ruboty) adapter for twitter user-stream AP
 ## Usage
 ```ruby
 # Gemfile
-gem 'ruboty-twitter-stream-filter', git: 'https://github.com/hatch2/ruboty-twitter-stream-filter'
+gem 'ruboty-twitter_stream_filter', git: 'https://github.com/hatch2/ruboty-twitter_stream_filter'
 ```
 
 ## ENV

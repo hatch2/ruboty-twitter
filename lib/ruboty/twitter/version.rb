@@ -1,5 +1,5 @@
 module Ruboty
-  module Twitter
-    VERSION = "0.0.8"
+  module TwitterStreamFilter
+    VERSION = "0.1.0"
   end
 end
