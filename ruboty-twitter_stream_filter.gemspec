@@ -4,7 +4,7 @@ require "ruboty/twitter/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "ruboty-twitter_stream_filter"
-  spec.version       = Ruboty::Twitter::VERSION
+  spec.version       = Ruboty::TwitterStreamFilter::VERSION
   spec.authors       = ["hatch2"]
   spec.email         = ["tasuke.radio@gmail.com"]
   spec.summary       = "An ruboty adapter for twitter."
